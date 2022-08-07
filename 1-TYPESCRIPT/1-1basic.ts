@@ -14,7 +14,7 @@
   const bool: boolean = true;
 
   //undifined
-  let name: undefined; //똥
+  let name: undefined; //💩
   let age: number | undefined;
   age = undefined;
   age = 1;
@@ -24,6 +24,35 @@
   }
 
   //null
-  let person: null; //똥
+  let person: null; //💩
   let person2: string | null;
+
+  //unknown 💩 가능한 안쓰는게 좋음
+  let notSure: unknown = 0;
+  notSure = "he";
+  notSure = true;
+
+  //any 💩 가능한 안쓰는게 좋음
+  let anyting: any = 0;
+  anyting = "hello";
+
+  //void
+  function print(): void {
+    console.log("hello");
+    return;
+  }
+  let unusable: void = undefined; //💩
+
+  //never 함수에서 절대 return 되는 값이 없는 경우
+  function throwError(message): never {
+    //message -> server (log)
+    throw new Error(message);
+    while (true) {}
+  }
+
+  //object
+  let obj: object; //💩
+  function acceptSomeObject(obj: object) {}
+  acceptSomeObject({ name: "ellie" });
+  acceptSomeObject({ animal: "god" });
 }
