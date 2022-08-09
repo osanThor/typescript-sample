@@ -44,7 +44,7 @@
   let unusable: void = undefined; //💩
 
   //never 함수에서 절대 return 되는 값이 없는 경우
-  function throwError(message): never {
+  function throwError(message: string): never {
     //message -> server (log)
     throw new Error(message);
     while (true) {}

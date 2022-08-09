@@ -22,4 +22,7 @@
   junName = "name";
   type JSON = "json";
   const json: JSON = "json";
+
+  type Boal = true;
+  const isCat: Boal = true;
 }
