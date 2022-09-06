@@ -36,7 +36,7 @@
         console.log("😱 no network");
         break;
       default:
-        throw new Error(`unkonwn state: ${state}`);
+        throw new Error(`this is unkonwn state: ${state}`);
     }
   }
 }
