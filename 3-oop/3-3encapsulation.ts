@@ -50,6 +50,9 @@
       return this.internalAge;
     }
     set age(num: number) {
+      if (num < 0) {
+        throw new Error("0보다 작음");
+      }
       this.internalAge = num;
     }
     constructor(private firstName: string, public lastName: string) {}
