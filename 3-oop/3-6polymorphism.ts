@@ -84,10 +84,17 @@
       };
     }
   }
-  const machine = new CoffeeMachine(23);
-  const latteMachine = new CaffeeLatteMachine(23, "SSSS");
-  const sweetMachine = new SweetCoffeeMaker(23);
 
-  const coffee = sweetMachine.makeCoffee(1);
-  console.log(coffee);
+  const machines: CoffeeMaker[] = [
+    new CoffeeMachine(16),
+    new CaffeeLatteMachine(16, "1"),
+    new SweetCoffeeMaker(16),
+    new CoffeeMachine(16),
+    new CaffeeLatteMachine(16, "1"),
+    new SweetCoffeeMaker(16),
+  ];
+  machines.forEach((machine) => {
+    console.log("-----------------------------------");
+    machine.makeCoffee(1);
+  });
 }
