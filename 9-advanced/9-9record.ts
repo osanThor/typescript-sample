@@ -8,3 +8,7 @@ const nav: Record<Page, PageInfo> = {
   about: { title: "About" },
   contact: { title: "Contact" },
 };
+
+//also 유틸리티 타입 ==> 대문자로
+type Product = "cat" | "dog";
+type NewProduct = Capitalize<Product>; // "Cat", "Dog"
