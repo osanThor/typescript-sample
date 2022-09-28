@@ -1,4 +1,5 @@
 {
+  //부분적인 것만 허용
   type ToDo = {
     title: string;
     description: string;
